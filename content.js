@@ -16,16 +16,6 @@ function calc_total_time(time) {
 
         // format
         if (String(total_time_h).includes(".")) {
-
-
-            // if ((String(total_time_h)[2] == ".")) {
-            //     if (String(total_time_h).slice(3).length >) {
-
-            //     }
-            //     total_time_formatted = ` (${String(total_time_h).slice(0, 2)}h${String(total_time_h).slice(3)})`
-            // } else {
-            //     total_time_formatted = ` (${String(total_time_h).slice(0, 1)}h${String(total_time_h).slice(2)})`;
-            // }
             total_time_formatted = ((String(total_time_h)[2] == ".") ? 
                 ` (${String(total_time_h).slice(0, 2)}h${Number(String(total_time_h).slice(2)) * 60})` :
                 ` (${String(total_time_h).slice(0, 1)}h${Number(String(total_time_h).slice(1)) * 60})`);
@@ -42,7 +32,7 @@ function calc_total_time(time) {
 
 console.log("(Extension) Connexion");
 
-function updateContent() {
+function showEventDuration() {
     for (let i of document.querySelectorAll(".gVNoLb")) {
         const new_task_time = calc_total_time(i.textContent);
         i.textContent = i.textContent + new_task_time;
