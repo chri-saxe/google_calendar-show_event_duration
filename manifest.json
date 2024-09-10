@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Google calendar : Show event duration",
-    "description": "Shows duration for each event. (Works with french Gcal only, for now.)",
+    "description": "Shows duration for each event by pressing B. (Works with french Gcal only, for now.)",
     "version": "1.0",
 
     "content_scripts": [
