@@ -1,7 +1,7 @@
-function calcDuration(task_time) {
+function calcDuration(event_time) {
     // format
-    let start_time = task_time.slice(0, 5);
-    let end_time = task_time.slice(8);
+    let start_time = event_time.slice(0, 5);
+    let end_time = event_time.slice(8);
     
     // convert to min
     let start_time_min = Number(start_time.slice(0, 2) * 60) + Number(start_time.slice(3));
@@ -30,16 +30,16 @@ function calcDuration(task_time) {
 
 function addEventDuration(keydown) {
     document.querySelectorAll(".gVNoLb").forEach((i) => {
-        let task_time_plus_duration = calcDuration(i.textContent);
-        if (keydown) {task_time_plus_duration = ""};
-        i.textContent = i.textContent + task_time_plus_duration;
+        let event_time_plus_duration = calcDuration(i.textContent);
+        if (keydown) {event_time_plus_duration = ""};
+        i.textContent = i.textContent + event_time_plus_duration;
     })
 }
 
 function removeEventDuration() {
     document.querySelectorAll(".gVNoLb").forEach((i) => {
-        let task_time_minus_duration = i.textContent.slice(0, 13);
-        i.textContent = task_time_minus_duration;
+        let event_time_minus_duration = i.textContent.slice(0, 13);
+        i.textContent = event_time_minus_duration;
     })
 }
 
